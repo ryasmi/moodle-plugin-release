@@ -3,7 +3,7 @@
 
 ### Usage
 1. Install with `npm i -D -E @ryansmith94/moodle-plugin-release`.
-1. Add a script to your `package.json` file using `moodle-plugin-release`.
+1. Add a script to your `package.json` file using `moodle-plugin-release release -i <pluginId> -z <zipFile>`.
 1. Run with `npm run moodle-plugin-release` in your CI manifest file.
 
 ### Requirements
