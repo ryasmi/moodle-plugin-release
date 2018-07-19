@@ -24,7 +24,7 @@
     "semantic-release": "ht2-release-public-circleci-lib"
   },
   "bin": {
-    "moodle-plugin-release": "./dist/index.js"
+    "moodle-plugin-release": "./bin/cli"
   },
   "dependencies": {
     "axios": "^0.18.0",
