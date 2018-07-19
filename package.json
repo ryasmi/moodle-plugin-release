@@ -6,7 +6,8 @@
   "license": "GPL-3.0",
   "author": "ryansmith94",
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "repository": {
     "type": "git",
