@@ -20,8 +20,8 @@ const main = async () => {
       const githubRepoSlug = process.env.TRAVIS_REPO_SLUG as string;
       const githubRepoTag = process.env.TRAVIS_TAG as string;
 
-      const moodlePluginId = opts.id as string;
-      const pluginZipFilePath = opts.zip as string;
+      const moodlePluginId = opts.id;
+      const pluginZipFilePath = opts.zip;
 
       const pluginVersion = await getPluginVersion();
 
@@ -39,4 +39,9 @@ const main = async () => {
   program.parse(process.argv);
 };
 
-main();
+main().then(() => {
+  return;
+}).catch((err) => {
+  // tslint:disable-next-line:no-console
+  console.error(err);
+});
