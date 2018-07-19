@@ -5,6 +5,9 @@
   "main": "src/index.js",
   "license": "GPL-3.0",
   "author": "ryansmith94",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ryansmith94/moodle-plugin-release.git"
@@ -21,7 +24,7 @@
     "semantic-release": "ht2-release-public-circleci-lib"
   },
   "bin": {
-    "moodle-plugin-release": "./src/index.js"
+    "moodle-plugin-release": "./dist/index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
