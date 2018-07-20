@@ -1,4 +1,5 @@
 import * as program from 'commander';
+import { join as joinPath } from 'path';
 import createRelease from './createRelease';
 import getPackageVersion from './getPackageVersion';
 import getPluginVersion from './getPluginVersion';
@@ -22,7 +23,7 @@ const main = async () => {
         const githubRepoTag = process.env.TRAVIS_TAG as string;
 
         const moodlePluginId = opts.id;
-        const pluginZipFilePath = opts.zip;
+        const pluginZipFilePath = joinPath(process.cwd(), opts.zip);
 
         const pluginVersion = await getPluginVersion();
 
