@@ -9,9 +9,10 @@ const getDateToday = () => {
 export default async () => {
   const today = getDateToday();
   const releasesToday = await getReleases(today);
+  const todayString = today.replace(/\-/g, '');
   // tslint:disable-next-line:no-magic-numbers
   if (releasesToday >= 9) {
-    return `${today}${releasesToday + 1}`;
+    return `${todayString}${releasesToday + 1}`;
   }
-  return `${today}0${releasesToday}`;
+  return `${todayString}0${releasesToday}`;
 };

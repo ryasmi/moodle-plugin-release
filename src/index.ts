@@ -15,25 +15,33 @@ const main = async () => {
     .option('-i --id <pluginId>', 'ID of the Moodle plugin')
     .option('-z --zip <pluginZip>', 'File path of the Moodle plugin zip file')
     .action(async (opts: ProgramOpts) => {
-      const moodleUsername = process.env.MOODLE_USERNAME as string;
-      const moodlePassword = process.env.MOODLE_PASSWORD as string;
-      const githubRepoSlug = process.env.TRAVIS_REPO_SLUG as string;
-      const githubRepoTag = process.env.TRAVIS_TAG as string;
+      try {
+        const moodleUsername = process.env.MOODLE_USERNAME as string;
+        const moodlePassword = process.env.MOODLE_PASSWORD as string;
+        const githubRepoSlug = process.env.TRAVIS_REPO_SLUG as string;
+        const githubRepoTag = process.env.TRAVIS_TAG as string;
 
-      const moodlePluginId = opts.id;
-      const pluginZipFilePath = opts.zip;
+        const moodlePluginId = opts.id;
+        const pluginZipFilePath = opts.zip;
 
-      const pluginVersion = await getPluginVersion();
+        const pluginVersion = await getPluginVersion();
 
-      await createRelease({
-        githubRepoSlug,
-        githubRepoTag,
-        moodlePassword,
-        moodlePluginId,
-        moodleUsername,
-        pluginVersion,
-        pluginZipFilePath,
-      });
+        await createRelease({
+          githubRepoSlug,
+          githubRepoTag,
+          moodlePassword,
+          moodlePluginId,
+          moodleUsername,
+          pluginVersion,
+          pluginZipFilePath,
+        });
+
+        // tslint:disable-next-line:no-console
+        console.log(`Created ${githubRepoTag} release`);
+      } catch (err) {
+        // tslint:disable-next-line:no-console
+        console.error(err);
+      }
     });
 
   program.parse(process.argv);
