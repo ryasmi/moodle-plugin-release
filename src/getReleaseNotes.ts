@@ -3,6 +3,7 @@ import axios from 'axios';
 interface Opts {
   readonly githubRepoSlug: string;
   readonly githubRepoTag: string;
+  readonly githubToken: string;
 }
 
 interface Release {
@@ -10,8 +11,11 @@ interface Release {
   readonly body: string;
 }
 
-export default async ({ githubRepoSlug, githubRepoTag }: Opts) => {
+export default async ({ githubRepoSlug, githubRepoTag, githubToken }: Opts) => {
   const res = await axios({
+    headers: {
+      Authorization: `token ${githubToken}`,
+    },
     method: 'GET',
     url: `https://api.github.com/repos/${githubRepoSlug}/releases/tags/${githubRepoTag}`,
   });

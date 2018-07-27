@@ -21,6 +21,7 @@ const main = async () => {
         const moodlePassword = process.env.MOODLE_PASSWORD as string;
         const githubRepoSlug = process.env.TRAVIS_REPO_SLUG as string;
         const githubRepoTag = process.env.TRAVIS_TAG as string;
+        const githubToken = process.env.GH_TOKEN as string;
 
         const moodlePluginId = opts.id;
         const pluginZipFilePath = joinPath(process.cwd(), opts.zip);
@@ -30,6 +31,7 @@ const main = async () => {
         await createRelease({
           githubRepoSlug,
           githubRepoTag,
+          githubToken,
           moodlePassword,
           moodlePluginId,
           moodleUsername,

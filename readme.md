@@ -22,10 +22,11 @@ deploy:
 ### Travis CI Environment Variables
 Requires the following custom environment variables in the Travis project settings.
 
-- `MOODLE_USERNAME`
-- `MOODLE_PASSWORD`
+- `MOODLE_USERNAME` - Your Moodle username.
+- `MOODLE_PASSWORD` - Your Moodle password.
+- `GH_TOKEN` - [Github Personal Access Token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
 
 This tool also uses the following pre-defined environment variables.
 
-- `TRAVIS_REPO_SLUG`
-- `TRAVIS_TAG`
+- `TRAVIS_REPO_SLUG` - The slug of the Github repository (e.g. `ryansmith94/moodle-plugin-release`).
+- `TRAVIS_TAG` - The release tag on Github (e.g. `v1.0.0`).

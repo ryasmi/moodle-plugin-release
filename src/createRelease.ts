@@ -5,6 +5,7 @@ import release from './release';
 interface Opts {
   readonly githubRepoSlug: string;
   readonly githubRepoTag: string;
+  readonly githubToken: string;
   readonly moodlePassword: string;
   readonly moodlePluginId: string;
   readonly moodleUsername: string;
@@ -15,6 +16,7 @@ interface Opts {
 export default async ({
   githubRepoSlug,
   githubRepoTag,
+  githubToken,
   moodlePassword,
   moodlePluginId,
   moodleUsername,
@@ -25,7 +27,7 @@ export default async ({
     moodlePassword,
     moodleUsername,
   });
-  const releaseNotes = await getReleaseNotes({ githubRepoSlug, githubRepoTag });
+  const releaseNotes = await getReleaseNotes({ githubRepoSlug, githubRepoTag, githubToken });
   await release({
     githubRepoSlug,
     githubRepoTag,
