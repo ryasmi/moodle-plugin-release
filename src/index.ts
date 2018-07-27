@@ -40,7 +40,7 @@ const main = async () => {
         });
 
         // tslint:disable-next-line:no-console
-        console.log(`Created ${githubRepoTag} release`);
+        console.log(`Created ${githubRepoTag} release as ${pluginVersion}`);
       } catch (err) {
         // tslint:disable-next-line:no-console
         console.error(err);
