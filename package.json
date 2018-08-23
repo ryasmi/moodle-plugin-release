@@ -40,7 +40,7 @@
   "devDependencies": {
     "@ht2-labs/semantic-release": "1.1.14",
     "@ht2-labs/typescript-project": "1.0.25",
-    "@types/cheerio": "0.22.8",
+    "@types/cheerio": "0.22.9",
     "@types/form-data": "2.2.1",
     "@types/fs-extra": "5.0.4",
     "@types/node": "10.7.1",
