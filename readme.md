@@ -1,3 +1,5 @@
+# DEPRECATED DUE TO [MOODLE API LIMITATIONS](https://tracker.moodle.org/browse/MDLSITE-1865?focusedCommentId=646150&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-646150)
+
 # Moodle Plugin Release
 > A CLI tool to automatically make releases to the Moodle Plugin Registry.
 
