@@ -38,7 +38,7 @@
     "simple-git": "^1.96.0"
   },
   "devDependencies": {
-    "@ht2-labs/semantic-release": "1.1.63",
+    "@ht2-labs/semantic-release": "1.1.64",
     "@ht2-labs/typescript-project": "1.1.0",
     "@types/cheerio": "0.22.11",
     "@types/form-data": "2.2.1",
