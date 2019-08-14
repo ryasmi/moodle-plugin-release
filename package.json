@@ -46,7 +46,7 @@
     "@types/node": "10.14.15",
     "@types/set-cookie-parser": "0.0.5",
     "jscpd": "0.6.25",
-    "rimraf": "2.6.3",
+    "rimraf": "2.7.0",
     "typescript": "2.9.2"
   },
   "publishConfig": {
